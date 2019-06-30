@@ -1,0 +1,13 @@
+Second question: 
+Cyclometic complexity will be the same. But reading line by line means loading only one line to the memory instead of loading the whole file to the memory and that's better if we have limited memory. but for the OS, if we read line by line that means OS will be slower since it has to access the file each time but if we load the whole file, OS operations are faster.
+
+
+Third question: 
+Cyclomatic complexity is the same.
+It's better to sort the words' frequency at the end than sorting each word added. because this means lower time complexity and it's easier to change the sorting algorithm as needed. 
+
+
+Forth question: 
+#of edges=32
+#of Nodes=22
+Cyclomatic complexity= 32-22+2=12 
