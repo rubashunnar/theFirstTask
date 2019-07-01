@@ -119,6 +119,6 @@ sort();
 for (let i=0; i<word_freq.length; i++){
     //print words that only occur less than 100 times
     if (word_freq[i][1]<100){
-        console.log(word_freq[i]);
+        console.log(word_freq[i][0]+": "+word_freq[i][2]);
     }
 }
