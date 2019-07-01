@@ -1,0 +1,2 @@
+Question three:
+All the procedures are idempotent except frequencies() because if we call it multiple times it will edit on the old word_freq array wich in each time will hold diferent values. 
