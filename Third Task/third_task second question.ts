@@ -69,5 +69,3 @@ for (let e=0;e<inputfile.length;e++){
         }
     
 
-
-
