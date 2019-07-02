@@ -12,8 +12,8 @@ let count=Object.entries(_.countBy(data)).sort()
 let lines=[]
 for (let r=0;r<count.length;r++){
     if (count[r][0]!= '' && count[r][1]<100){
-    let re=new RegExp(count[r][0],"g")
-    let no=lineNumber(m,re);
+    let re=new RegExp(count[r][0]+' ',"g")
+    let no=lineNumber(m.replace(/[^a-z0-9\n]+/g, " "),re);
     let line=[]
     for (let i=0;i<no.length;i++){
         if (line.indexOf(Math.floor(no[i]["line"]/45)+1)==-1){
