@@ -1,0 +1,10 @@
+Q2: Mismatch. What happens if the sorted method of WordFrequency- Manager is renamed to sorted freqs, for example? 
+Explain the result in detail.
+
+Answer: It will cause an error beacuse there's no implementation for the sort class. 
+we might add the sorted_freq function to the abstract class instead of sorted 
+
+
+Q3:Decorator.
+Answer: A decorator is needed when the language is dynamically typed like python. 
+But Typescript is statically typed, so we only add the exact types of variables instead of "any"
