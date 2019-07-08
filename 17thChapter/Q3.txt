@@ -1,0 +1,2 @@
+We could use reflection on stop words since it's a one line function but it cannot be used to on 
+word_occurances because it's a multiple line code and Eval could only accept a single line of code.
