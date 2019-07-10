@@ -20,7 +20,7 @@ function extract_words(file_path){
 
 function remove_stop_words(word_list){
     let stop_words=[]
-    if (typeof(word_list)!=typeof([])){
+    if (!Array.isArray(word_list)){
         throw new AssertionError();
     }
     try{
@@ -44,7 +44,7 @@ function remove_stop_words(word_list){
 }   
 
 function frequencies(word_list){
-    if (typeof(word_list)!=typeof([""])|| word_list==[]) throw new AssertionError();
+    if (!Array.isArray(word_list)|| word_list.length==0) throw new AssertionError();
     let word_freq={}
     for (let i=0;i<word_list.length;i++){
         let line=word_list[i];
@@ -66,7 +66,7 @@ function frequencies(word_list){
 }
 
 function sort(word_freq){
-    if (typeof(word_freq)!=typeof({})||word_freq=={})throw new AssertionError();
+    if (typeof(word_freq)!=typeof({})||Array.isArray(word_freq)||_.isEmpty(word_freq))throw new AssertionError();
     return Object.entries(_.fromPairs(_.sortBy(_.toPairs(word_freq), 1).reverse()))
 }
 
@@ -74,7 +74,7 @@ try{
     let filename="in.txt"
     //console.log(remove_stop_words(extract_words(filename)))
     let wf=sort(frequencies(remove_stop_words(extract_words(filename))))
-    if (typeof(wf)!=typeof([]))throw new AssertionError();
+    if (!Array.isArray(wf))throw new AssertionError();
     for (let i=0;i<wf.length;i++){
         if (wf[i][1][0]<100)
             console.log(wf[i][0]+": "+wf[i][1][1]);
