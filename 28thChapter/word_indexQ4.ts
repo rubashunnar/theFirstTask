@@ -11,7 +11,7 @@ let time=4000
 class ActiveWFObject  {
     name 
     queue
-    stopMe
+     
     promise;
     constructor() {
         this.name = String(typeof (this))
